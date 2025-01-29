@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Prompt Refining Tool ✨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Prompt Refining Tool! This website aims to help users refine and improve their prompts for various applications.
 
-## Available Scripts
+## Table of Contents 📚
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [TechStack](#techstack)
 
-In the project directory, you can run:
+## Introduction 📝
+The Prompt Refining Website is designed to assist users in creating better prompts by providing suggestions and improvements. This tool is built using Python for the backend, React for the frontend, and Tailwind CSS for styling.
 
-### `npm start`
+## Features 🌟
+- Refine and improve prompts
+- User-friendly interface
+- Real-time suggestions
+- Easy integration with other applications
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation 🛠️
+To get started with the Prompt Refining Tool, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/roche-jeethan/promptrefiner.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd promptrefiner
+    ```
+3. Install the backend dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. Install the frontend dependencies:
+    ```bash
+    cd frontend
+    npm install
+    ```
 
-### `npm test`
+## Usage 🚀
+To run the application, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Start the backend server:
+    ```bash
+    python app.py
+    ```
+2. Start the frontend development server:
+    ```bash
+    cd frontend
+    npm start
+    ```
+3. Open your browser and navigate to `http://localhost:3000` to use the Prompt Refining Tool.
 
-### `npm run build`
+## TechStack 🧰
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Python**: Backend logic and API
+- **React**: Frontend framework
+- **Tailwind CSS**: Styling
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Have a great time! 🎉
