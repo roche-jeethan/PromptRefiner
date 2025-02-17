@@ -19,7 +19,7 @@ function Navbar() {
         onClick={() => setDarkMode(!darkMode)}
         className="p-2 rounded bg-gray-300 dark:bg-white-700"
       >
-        {darkMode ? <FaSun title="Light Mode" /> : <FaMoon title="Dark Mode" />}
+        {darkMode ? <FaSun title="Switch to Light Mode" /> : <FaMoon title="Switch to Dark Mode" />}
       </button>
     </nav>
   );
