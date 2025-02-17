@@ -14,7 +14,7 @@ const Home = () => {
       </p>
       <button
         onClick={() => navigate("/chat")}
-        className="px-6 py-3 bg-transparent text-black text-lg font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-all"
+        className="px-6 py-3 bg-black text-white dark:bg-white dark:text-black text-lg font-semibold rounded-lg shadow-lg hover:bg-gray-700 transition-all"
       >
         Get Started
       </button>
