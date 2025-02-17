@@ -50,7 +50,7 @@ Refined Prompt:`;
     }, [messages]);
 
     return (
-        <div className="flex flex-col items-center h-screen bg-white dark:bg-gray-800">
+        <div className="flex flex-col items-center h-screen bg-white dark:bg-gray-900">
             <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mt-16 mb-6">
                 Refine your Prompts!
             </h1>
