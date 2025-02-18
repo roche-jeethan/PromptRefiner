@@ -54,6 +54,21 @@ Refined Prompt:`;
             <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mt-16 mb-6">
                 Refine your Prompts!
             </h1>
+            <div className="flex flex-col items-center w-3/4 max-w-2xl mb-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md">
+                <label htmlFor="apiKey" className="text-gray-900 dark:text-gray-100 mb-2">
+                    Enter your Gemini API Key
+                </label>
+                <input
+                    type="password"
+                    id="apiKey"
+                    placeholder="Enter your API key"
+                    className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    onChange={(e) => {
+                        const apiKey = e.target.value;
+                        localStorage.setItem('geminiApiKey', apiKey);
+                    }}
+                />
+            </div>
             <div className="flex flex-col w-3/4 max-w-2xl mb-20 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md overflow-y-auto">
                 {messages.map((message, index) => (
                     <div key={index} className={`p-2 my-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-300 dark:bg-gray-600 text-black dark:text-white'}`}>
