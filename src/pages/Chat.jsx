@@ -58,41 +58,44 @@ Refined Prompt:`;
                 <label htmlFor="apiKey" className="text-gray-900 dark:text-gray-100 mb-2">
                     Enter your Gemini API Key
                 </label>
-                <div className="flex w-full">
-                    <input
-                        type="password"
-                        id="apiKey"
-                        placeholder="Enter your API key"
-                        className="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        onChange={(e) => {
-                            const apiKey = e.target.value;
-                            localStorage.setItem('geminiApiKey', apiKey);
-                        }}
-                    />
-                    <button
-                        onClick={() => {
-                            const apiKey = localStorage.getItem('geminiApiKey');
-                            const verifyApiKey = async (apiKey) => {
-                                try {
-                                    const response = await generateContent('test', apiKey);
-                                    if (response.error && response.error.includes('API_KEY_INVALID')) {
-                                        alert('Invalid API Key');
+                <div className="flex flex-col w-full">
+                    <div className="flex w-full">
+                        <input
+                            type="password"
+                            id="apiKey"
+                            placeholder="Enter your API key"
+                            className="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            onChange={(e) => {
+                                const apiKey = e.target.value;
+                                localStorage.setItem('geminiApiKey', apiKey);
+                            }}
+                        />
+                        <button
+                            onClick={() => {
+                                const apiKey = localStorage.getItem('geminiApiKey');
+                                const verifyApiKey = async (apiKey) => {
+                                    try {
+                                        const response = await generateContent('test', apiKey);
+                                        const messageDiv = document.getElementById('apiKeyMessage');
+                                        if (response.error && response.error.includes('API_KEY_INVALID')) {
+                                            messageDiv.innerHTML = '<div class="text-sm text-red-500 mt-2 flex items-center"><span class="mr-1">✕</span>Invalid API Key</div>';
+                                            return false;
+                                        }
+                                        messageDiv.innerHTML = '<div class="text-sm text-green-600 mt-2 flex items-center"><span class="mr-1">&#10003</span>Valid API Key</div>';
+                                        return true;
+                                    } catch (error) {
+                                        document.getElementById('apiKeyMessage').innerHTML = '<div class="text-sm text-red-500 mt-2 flex items-center"><span class="mr-1">✕</span>Invalid API Key</div>';
                                         return false;
                                     }
-                                    alert('API Key is valid');
-                                    return true;
-                                } catch (error) {
-                                    alert('Invalid API Key');
-                                    return false;
-                                }
-                            };
-                            verifyApiKey(apiKey);
-                            console.log('API Key:', apiKey);
-                        }}
-                        className="p-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600"
-                    >
-                        Verify
-                    </button>
+                                };
+                                verifyApiKey(apiKey);
+                            }}
+                            className="p-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600"
+                        >
+                            Verify
+                        </button>
+                    </div>
+                    <div id="apiKeyMessage"></div>
                 </div>
             </div>
             <div className="flex flex-col w-3/4 max-w-2xl mb-20 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md overflow-y-auto">
