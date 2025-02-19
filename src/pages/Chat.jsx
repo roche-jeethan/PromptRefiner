@@ -58,16 +58,28 @@ Refined Prompt:`;
                 <label htmlFor="apiKey" className="text-gray-900 dark:text-gray-100 mb-2">
                     Enter your Gemini API Key
                 </label>
-                <input
-                    type="password"
-                    id="apiKey"
-                    placeholder="Enter your API key"
-                    className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    onChange={(e) => {
-                        const apiKey = e.target.value;
-                        localStorage.setItem('geminiApiKey', apiKey);
-                    }}
-                />
+                <div className="flex w-full">
+                    <input
+                        type="password"
+                        id="apiKey"
+                        placeholder="Enter your API key"
+                        className="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onChange={(e) => {
+                            const apiKey = e.target.value;
+                            localStorage.setItem('geminiApiKey', apiKey);
+                        }}
+                    />
+                    <button
+                        onClick={() => {
+                            const apiKey = localStorage.getItem('geminiApiKey');
+                            // Add your API key verification logic here
+                            console.log('API Key:', apiKey);
+                        }}
+                        className="p-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600"
+                    >
+                        Verify
+                    </button>
+                </div>
             </div>
             <div className="flex flex-col w-3/4 max-w-2xl mb-20 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md overflow-y-auto">
                 {messages.map((message, index) => (
