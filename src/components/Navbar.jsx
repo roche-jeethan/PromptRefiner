@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import useDarkMode  from "../hooks/useDarkMode";
 import iconLight from "../assets/logo-light.png";
@@ -20,7 +20,7 @@ function Navbar() {
         onClick={() => setDarkMode(!darkMode)}
         className="p-2 rounded bg-gray-300 dark:bg-white-700"
       >
-        {darkMode ? <FaSun title="Switch to Light Mode" /> : <FaMoon title="Switch to Dark Mode" />}
+        {darkMode ? <IoSunnyOutline title="Switch to Light Mode" /> : <IoMoonOutline title="Switch to Dark Mode" />}
       </button>
     </nav>
   );
