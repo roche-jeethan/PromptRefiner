@@ -72,7 +72,21 @@ Refined Prompt:`;
                     <button
                         onClick={() => {
                             const apiKey = localStorage.getItem('geminiApiKey');
-                            // Add your API key verification logic here
+                            const verifyApiKey = async (apiKey) => {
+                                try {
+                                    const response = await generateContent('test', apiKey);
+                                    if (response.error && response.error.includes('API_KEY_INVALID')) {
+                                        alert('Invalid API Key');
+                                        return false;
+                                    }
+                                    alert('API Key is valid');
+                                    return true;
+                                } catch (error) {
+                                    alert('Invalid API Key');
+                                    return false;
+                                }
+                            };
+                            verifyApiKey(apiKey);
                             console.log('API Key:', apiKey);
                         }}
                         className="p-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600"
