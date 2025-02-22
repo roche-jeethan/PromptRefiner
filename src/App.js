@@ -4,13 +4,11 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Chat from "./pages/Chat";
 import Footer from "./components/Footer";
-import bgWhite from "./assets/bg-white.svg";
-import bgDark from "./assets/bg-dark.svg";
 
 function App() {
   return (
       <Router>
-        <div className={`flex flex-col min-h-screen ${bgWhite} dark:${bgDark} bg-pattern bg-fixed bg-cover`}>
+        <div className={"flex flex-col min-h-screen"}>
           <Navbar />
           <main className="flex-grow">
             <Routes>
