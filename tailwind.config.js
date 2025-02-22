@@ -6,7 +6,12 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+        'light-mode-image': "url('./assets/bg-white.svg')",
+        'dark-mode-image': "url('./assets/bg-dark.svg')",
+      }),
+    },
   },
   plugins: [],
 };
