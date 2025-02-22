@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'light-mode-image': "url('./assets/bg-white.svg')",
-        'dark-mode-image': "url('./assets/bg-dark.svg')",
+        'bgWhite': "url('./assets/bg-white.svg')",
+        'bgDark': "url('./assets/bg-dark.svg')",
       }),
     },
   },
