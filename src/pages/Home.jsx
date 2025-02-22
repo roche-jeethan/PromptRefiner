@@ -5,7 +5,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center min-h-screen text-black dark:text-white px-6">
+    <div className="flex flex-col items-center bg-bgWhite dark:bg-bgDark min-h-screen text-black dark:text-white px-6">
       <h1 className="text-5xl md:text-6xl font-bold text-center mt-40 mb-6">
         Welcome to Prompt Refiner
       </h1>
