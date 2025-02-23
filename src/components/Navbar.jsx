@@ -9,7 +9,7 @@ function Navbar() {
   const [darkMode, setDarkMode] = useDarkMode();
 
   return (
-    <nav className="w-full px-6 py-4 flex justify-between items-center bg-white-200 dark:bg-gray-900">
+    <nav className="w-full px-6 py-4 flex justify-between items-center bg-white-100 dark:bg-[#1a0826]">
       <div className="flex items-center">
         <img src={darkMode ? iconDark : iconLight} alt="Logo" className="w-8 h-8 mr-2" />
         <Link to="/" className="text-2xl font-bold text-gray-900 dark:text-gray-100">
