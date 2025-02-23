@@ -98,7 +98,7 @@ Refined Prompt:`;
                     <div id="apiKeyMessage"></div>
                 </div>
             </div>
-            <div className="flex flex-col w-3/4 max-w-2xl mb-20 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md overflow-y-auto">
+            <div className="flex flex-col w-3/4 max-w-2xl mb-20 p-4 bg-transparent dark:bg-transparent rounded-lg shadow-md overflow-y-auto">
                 {messages.map((message, index) => (
                     <div key={index} className={`p-2 my-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-300 dark:bg-gray-600 text-black dark:text-white'}`}>
                         {message.text}
