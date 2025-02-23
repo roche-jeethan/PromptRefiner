@@ -80,6 +80,9 @@ Refined Prompt:`;
                                         if (response.error && response.error.includes('API_KEY_INVALID')) {
                                             messageDiv.innerHTML = '<div class="text-sm text-red-500 mt-2 flex items-center"><span class="mr-1">✕</span>Invalid API Key</div>';
                                             return false;
+                                        } else if(apiKey === ""){
+                                            messageDiv.innerHTML = '<div class="text-sm text-red-500 mt-2 flex items-center"><span class="mr-1">✕</span>Blank Input not allowed</div>';
+                                            return false;
                                         }
                                         messageDiv.innerHTML = '<div class="text-sm text-green-600 mt-2 flex items-center"><span class="mr-1">&#10003</span>Valid API Key</div>';
                                         return true;
