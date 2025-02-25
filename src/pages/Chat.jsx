@@ -103,7 +103,7 @@ Refined Prompt:`;
             </div>
             <div className="flex flex-col w-3/4 max-w-2xl mb-20 p-4 bg-transparent dark:bg-transparent rounded-lg shadow-md overflow-y-auto">
                 {messages.map((message, index) => (
-                    <div key={index} className={`p-2 my-2 rounded-lg ${message.sender === 'user' ? 'bg-transparent text-black' : 'bg-gray-300 dark:bg-gray-600 text-black dark:text-white'}`}>
+                    <div key={index} className={`p-2 my-2 rounded-lg ${message.sender === 'user' ? 'bg-transparent text-black dark:text-white' : 'bg-transparent dark: text-black dark:text-white'}`}>
                         {message.text}
                     </div>
                 ))}
