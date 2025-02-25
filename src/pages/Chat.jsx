@@ -39,11 +39,11 @@ Refined Prompt:`;
         setPrompt(e.target.value);
     };
 
-    const handleKeyDown = (e) => {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    };
+    // const handleKeyDown = (e) => {
+    //     if (e.key === 'Enter') {
+    //         sendMessage();
+    //     }
+    // };
 
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -93,7 +93,7 @@ Refined Prompt:`;
                                 };
                                 verifyApiKey(apiKey);
                             }}
-                            className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                            className="p-2 bg-black dark:bg-white dark:text-black text-white rounded-lg hover:bg-gray-900"
                         >
                             Verify
                         </button>
@@ -101,25 +101,30 @@ Refined Prompt:`;
                     <div id="apiKeyMessage"></div>
                 </div>
             </div>
-            <div className="flex flex-col w-3/4 max-w-2xl mb-20 p-4 bg-transparent dark:bg-transparent rounded-lg shadow-md overflow-y-auto">
-                {messages.map((message, index) => (
-                    <div key={index} className={`p-2 my-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-300 dark:bg-gray-600 text-black dark:text-white'}`}>
-                        {message.text}
-                    </div>
-                ))}
-                <div ref={messagesEndRef} />
+
+            <div className="flex flex-col w-3/4 max-w-2xl mb-4 flex-grow">
+                <div className="flex-grow overflow-y-auto p-4 mb-4 bg-transparent dark:bg-transparent rounded-lg shadow-md" style={{ maxHeight: "calc(100vh - 400px)" }}>
+                    {messages.map((message, index) => (
+                        <div key={index} className={`p-2 my-2 rounded-lg ${message.sender === 'user' ? 'bg-transparent text-black dark:text-white' : 'bg-transparent dark: text-black dark:text-white'}`}>
+                            {message.text}
+                        </div>
+                    ))}
+                    <div ref={messagesEndRef} />
+                </div>
                 <textarea
                     type="text"
                     value={prompt}
                     onChange={handleInputChange}
-                    onKeyDown={handleKeyDown}
-                    placeholder="Type your message..."
-                    className="w-full p-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    style={{ height: '100px' }}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                            e.preventDefault();
+                            sendMessage();
+                        }
+                    }}
+                    placeholder="Type your message... (Shift+Enter for new line)"
+                    className="w-full bg-transparent p-2 rounded-lg focus:outline-none focus:ring-2 dark:focus:ring-orange-200 dark:text-white border border-gray-300 dark:border-gray-700"
+                    style={{ height: '100px', minHeight: '100px' }}
                 />
-                <button onClick={sendMessage} className="w-full p-2 mt-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-                    Send
-                </button>
             </div>
         </div>
     );
