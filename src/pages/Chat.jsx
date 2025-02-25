@@ -39,11 +39,11 @@ Refined Prompt:`;
         setPrompt(e.target.value);
     };
 
-    const handleKeyDown = (e) => {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    };
+    // const handleKeyDown = (e) => {
+    //     if (e.key === 'Enter') {
+    //         sendMessage();
+    //     }
+    // };
 
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -112,14 +112,16 @@ Refined Prompt:`;
                     type="text"
                     value={prompt}
                     onChange={handleInputChange}
-                    onKeyDown={handleKeyDown}
-                    placeholder="Type your message..."
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                            e.preventDefault();
+                            sendMessage();
+                        }
+                    }}
+                    placeholder="Type your message... (Shift+Enter for new line)"
                     className="w-full p-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     style={{ height: '100px' }}
                 />
-                <button onClick={sendMessage} className="w-full p-2 mt-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-                    Send
-                </button>
             </div>
         </div>
     );
