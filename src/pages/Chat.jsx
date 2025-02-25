@@ -93,7 +93,7 @@ Refined Prompt:`;
                                 };
                                 verifyApiKey(apiKey);
                             }}
-                            className="p-2 bg-black dark:bg-white dark:text-black text-white rounded-lg hover:bg-blue-600"
+                            className="p-2 bg-black dark:bg-white dark:text-black text-white rounded-lg hover:bg-gray-900"
                         >
                             Verify
                         </button>
