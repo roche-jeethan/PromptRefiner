@@ -1,9 +1,9 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const generateContent = async (prompt) => {
-  const API_KEY = localStorage.getItem('geminiApiKey'); // Retrieve API key from localStorage
+  const API_KEY = localStorage.getItem('geminiApiKey');
   const genAI = new GoogleGenerativeAI(API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
   try {
     console.log("API Key:", API_KEY);
