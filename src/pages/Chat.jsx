@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { generateContent } from '../services/geminiService';
 
 function Chat() {
@@ -99,6 +100,10 @@ Refined Prompt:`;
                         </button>
                     </div>
                     <div id="apiKeyMessage"></div>
+                    <div className="flex flex-col justify-between items-center mt-2">
+                        <p className="text-black dark:text-white ">How to get API key? <Link to="/apidocs" className="text-black dark:text-white hover:underline hover:text-gray-800 dark:hover:text-gray-300">Click Here</Link></p>
+                        
+                    </div>
                 </div>
             </div>
 
