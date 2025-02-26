@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Chat from "./pages/Chat";
 import Footer from "./components/Footer";
+import ApiDocs from "./pages/ApiDocs";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/chat" element={<Chat />} />
+              <Route path="/apidocs" element={<ApiDocs />} />
             </Routes>
           </main>
           <Footer />
