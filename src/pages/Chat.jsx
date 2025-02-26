@@ -99,6 +99,7 @@ Refined Prompt:`;
                         </button>
                     </div>
                     <div id="apiKeyMessage"></div>
+                    <p className="flex flex-col items-center text-black dark:text-white ">How to get API key?</p>
                 </div>
             </div>
 
