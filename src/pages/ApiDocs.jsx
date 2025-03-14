@@ -6,7 +6,7 @@ function ApiDocs() {
             <div className="ml-10">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3">Guidelines</h1>
             <p className="mt-3 text-sm sm:text-base md:text-lg lg:text-xl">Step 1: Click on the 
-                <a className=""href=""> Link </a>
+                <a className=""href="https://aistudio.google.com/app/apikey"> Link </a>
                  To redirect to Google API Keys from Google AI Studio
             </p>
             <div className="flex justify-center w-full my-4">
