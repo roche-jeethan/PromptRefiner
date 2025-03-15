@@ -9,7 +9,7 @@ import step6 from "../assets/apidocs/step6.png";
 function ApiDocs() {
     return(
         <div className="flex flex-col bg-bgWhite text-white dark:bg-bgDark">
-            <div className="ml-10">
+            <div className="ml-5 mr-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3">Guidelines</h1>
             <p className="mt-3 text-sm sm:text-base md:text-lg lg:text-xl">Step 1: Click on the 
                 <a className=""href="https://aistudio.google.com/app/apikey"> Link </a>
