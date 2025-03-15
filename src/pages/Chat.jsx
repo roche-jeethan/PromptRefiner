@@ -14,15 +14,10 @@ function Chat() {
             setPrompt('');
 
             // Prompt template
-            const promptTemplate = `You are an expert prompt refiner. Your task is to improve the given prompt to be clearer, more specific, and more effective for use with large language models. It's okay if it is a very detailed one. When it comes to coding or making projects, ensure you provide project structure and a full plan if asked.
+            const promptTemplate = `You are an AI prompt optimization specialist. Provide the best response:
 
-Original Prompt:
-${prompt}
-
-Refinement Instructions:
-
-
-Refined Prompt:`;
+${prompt.trim() === '' ? 'Error: Empty prompt' : `INPUT PROMPT:
+${prompt}`}`;
 
             const geminiResponse = await generateContent(promptTemplate);
 
